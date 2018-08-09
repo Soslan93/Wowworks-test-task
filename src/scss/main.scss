@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css?family=PT+Sans');
+
+.title {
+    font-family: 'PT Sans';
+    font-size: 28px;
+    letter-spacing: 1px;
+    padding-bottom: 28px;
+    padding-left: 29px;
+}
+.tab {
+    border-bottom: 1px solid #ccc; 
+    margin-bottom: 20px;
+}
+
+.add {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 52px;
+    z-index: 5;
+    margin-top: -52px;
+    padding-bottom: 31px;
+}
+.btn-circle {
+    width: 55px;
+    height: 55px;
+    border-radius: 27.5px;
+    text-align: center;
+    padding-left: 0;
+    padding-right: 0;
+    font-size: 26px;
+    color: #fff;
+    background-color: #ff6633;
+    border: none;
+    box-shadow: 0px 7px 5px 1px rgba(0,0,0,0.2);
+}
+.nav-link {
+    color: #999;
+    padding-bottom: 20px;
+    &:hover {
+        color: #000;
+    }
+}
+
+.nav-link-active {
+    color: #000;
+    border-bottom: 1px solid #ff6633;
+}
+.tabs {
+    display: flex;
+    padding-bottom: 4px;
+    margin: 0;
+    padding: 0;
+}
+.container-main {
+    max-width: 1200px !important;
+    padding: 0 !important;
+}
+.main {
+    padding-left: 23px;
+}
+.task-list {
+    position: relative;
+}
+.word-search {
+    width: 193px;
+    height: 30px;
+}
+.filter {
+    display: flex;
+    padding-left: 30px;
+}
+.form-group {
+    margin-right: 30px;
+}
+.check {
+    display: flex;
+    padding-top: 4px;
+    font-size: 14px;
+    color: #999;
+}
+.custom-checkbox {
+    margin-right: 29px;
+}
+.custom-control-input {
+    margin-right: 5px;
+}
+.form-check {
+    font-size: 13px;
+}
+.userName {
+    font-size: 13.4px;
+    padding-top: 6px;
+    padding-right: 2px;
+}
+.dropdown-toggle {
+    background-color: #fff;
+    border: none;
+    width: 5px;
+    height: 35px;
+    color: #666;
+}

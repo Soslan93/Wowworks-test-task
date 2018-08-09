@@ -1,0 +1,37 @@
+{
+  "name": "wowworks-test-task",
+  "version": "1.0.0",
+  "description": "wowworks-test-task",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js",
+    "build:prod": "webpack --env production",
+    "watch:dev": "webpack --watch --env development",
+    "build:dev": "webpack --env development"
+  },
+  "author": "s.kulumbekov",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "copy-webpack-plugin": "^4.5.2",
+    "css-loader": "^1.0.0",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.2.0",
+    "imagemin-webpack-plugin": "^2.2.0",
+    "mini-css-extract-plugin": "^0.4.1",
+    "node-sass": "^4.9.2",
+    "node-static": "^0.7.10",
+    "path": "^0.12.7",
+    "react": "^16.4.2",
+    "react-dom": "^16.4.2",
+    "sass-loader": "^7.1.0",
+    "webpack": "^4.16.5",
+    "webpack-dev-server": "^3.1.5"
+  },
+  "dependencies": {
+    "webpack-cli": "^3.1.0"
+  }
+}

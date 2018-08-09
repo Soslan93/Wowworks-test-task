@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css?family=PT+Sans:700');
+.header {
+    padding-bottom: 4px;
+    background-color: #000;
+    margin-bottom: 25px;
+}
+.logo {
+    color: #fff;
+    font-size: 24px;
+    padding-top: 13px;
+    font-family: 'PT Sans';
+}
+.navbar-nav {
+    padding-top: 4px;
+    display: flex;
+    margin-bottom: 0px;
+}
+.somenav {
+    margin-right: 95px;
+}
+.information {
+    display: flex;
+    padding-top: 18px;
+    padding-left: 48px;
+}
+.balance {
+    font-size: 13px;
+    color: #838383;
+}
+.balance > span {
+    color: #fff;
+    font-size: 15px;
+    padding-left: 6px;
+    letter-spacing: 1px;
+    font-family: 'PT Sans';
+}
+.notification {
+    padding-left: 20px;
+    padding-right: 24px;
+}
+.user {
+    font-family: 'PT Sans';
+    padding-right: 8px;
+}
+.link {
+    color: #fff;
+}
+.nav-item {
+    list-style: none;
+    font-size: 15px;
+    padding-right: 25px;
+}
+.dropdown-toggle-header {
+    background-color: #000 !important;
+    padding-right: 30px;
+}

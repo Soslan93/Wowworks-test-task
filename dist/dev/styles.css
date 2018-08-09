@@ -1,0 +1,23 @@
+@import url(https://fonts.googleapis.com/css?family=PT+Sans:700);
+* {
+  margin: 0;
+  padding: 0; }
+
+.header {
+  padding-bottom: 4px;
+  background-color: #000; }
+
+.logo {
+  color: #fff;
+  font-size: 24px;
+  padding-top: 13px;
+  font-family: 'PT Sans'; }
+
+.navbar-nav {
+  padding-top: 4px; }
+
+.nav-item {
+  list-style: none;
+  font-size: 15px;
+  padding-right: 25px; }
+
