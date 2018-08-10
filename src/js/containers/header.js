@@ -33,7 +33,7 @@ export default class Header extends Component {
                                 </ul>
                             </nav>
                         </div>
-                        <div className="col-12 col-sm-5 col-lg-5 d-flex justify-content-md-end">
+                        <div className="col-12 col-sm-5 col-lg-5 d-flex justify-content-md-end someinfo">
                             <div className="information">
                                 <div className="balance">Баланс <span>{balance} ₽</span></div>
                                 <div className="notification"><img src="assets/ic-notifications-black-24-px.png" /> </div>

@@ -47,9 +47,10 @@
 }
 .tabs {
     display: flex;
-    padding-bottom: 4px;
     margin: 0;
     padding: 0;
+    margin-left: 28px;
+    padding-bottom: 20px;
 }
 .container-main {
     max-width: 1200px !important;
@@ -98,4 +99,33 @@
     width: 5px;
     height: 35px;
     color: #666;
+}
+.badge-light {
+    border: 1px solid #ddd;
+    color: #ddd;
+    margin-left: 4px;
+}
+.badge-active {
+    background-color: #ff6633;
+    color: #fff;
+    border: none;
+}
+td, th {
+    vertical-align: middle !important;
+    text-align: center !important;
+}
+.table-hover {
+    font-size: 12px;
+    font-family: 'PT Sans';
+    color: #ccc;
+}
+.taskItem {
+    font-size: 15px;
+    color: #000;
+}
+td.task {
+    text-align: start !important;
+}
+th.task {
+    text-align: start !important;
 }

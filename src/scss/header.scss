@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=PT+Sans:700');
 .header {
-    padding-bottom: 4px;
+    padding-bottom: 7px;
     background-color: #000;
     margin-bottom: 25px;
 }
@@ -11,12 +11,16 @@
     font-family: 'PT Sans';
 }
 .navbar-nav {
-    padding-top: 4px;
+    padding-top: 18px;
     display: flex;
     margin-bottom: 0px;
+    padding-left: 18px;
 }
 .somenav {
     margin-right: 95px;
+}
+.someinfo {
+    padding-right: 0px !important;
 }
 .information {
     display: flex;
@@ -30,12 +34,12 @@
 .balance > span {
     color: #fff;
     font-size: 15px;
-    padding-left: 6px;
+    padding-left: 9px;
     letter-spacing: 1px;
     font-family: 'PT Sans';
 }
 .notification {
-    padding-left: 20px;
+    padding-left: 24px;
     padding-right: 24px;
 }
 .user {
@@ -48,7 +52,7 @@
 .nav-item {
     list-style: none;
     font-size: 15px;
-    padding-right: 25px;
+    padding-right: 42px;
 }
 .dropdown-toggle-header {
     background-color: #000 !important;
