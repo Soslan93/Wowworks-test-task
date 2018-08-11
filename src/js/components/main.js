@@ -6,7 +6,7 @@ import Filter from '../containers/main/filter';
 const user = "Никита Ласточкин";
 
 export default class Main extends Component {
-    
+
     render() {
         return (
             <div className="main">
@@ -21,7 +21,9 @@ export default class Main extends Component {
                         </div>
                         <Filter />
                         <div className="task-list">
-                            <TaskList />
+                            <div className="task-task">
+                                <TaskList />
+                            </div>
                         </div>
                     </div>
                 </div>

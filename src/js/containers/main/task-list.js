@@ -35,8 +35,10 @@ class TaskList extends Component {
     }
 }
 
-function mapStateToProps({ task }) {
-    return { task };
+function mapStateToProps({ task, filterTask, filterByType }) {
+    return {
+        task: task.filter(task => task.description.toLowerCase().includes(filterTask)&&task.type.includes(filterByType))
+    };
 }
 
 export default connect(mapStateToProps)(TaskList);
