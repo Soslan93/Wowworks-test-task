@@ -5,7 +5,7 @@
 Clone Repository
 
 ```
-https://github.com/Soslan93/search-followers.git
+https://github.com/Soslan93/some-project.git
 ```
 Go to project folder
 ```
