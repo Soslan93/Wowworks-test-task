@@ -5,6 +5,10 @@ import { TableRow } from "./task-table/table-row";
 
 class TaskDraftList extends Component {
 
+    /**
+    * Render a list of task
+    * @param {Array} task - The list of the task.
+    */
     renderTask(task) {
         return (
             <TableRow task={task} />

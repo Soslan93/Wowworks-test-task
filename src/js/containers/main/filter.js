@@ -66,5 +66,5 @@ class Filter extends Component {
 function mapDispatchToProps(dispatch) {
     return bindActionCreators({ filterList, filterByType }, dispatch);
 }
-
+// связываем actions с компонентой
 export default connect(null, mapDispatchToProps)(Filter);

@@ -4,7 +4,10 @@ import { TableHead } from "./task-table/table-head";
 import { TableRow } from "./task-table/table-row";
 
 class TaskRejectList extends Component {
-
+    /**
+     * Render a list of task
+     * @param {Array} task - The list of the task.
+     */
     renderTask(task) {
         return (
             <TableRow task={task} />

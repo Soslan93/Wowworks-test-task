@@ -9,7 +9,7 @@ class Tabs extends Component {
 
         this.changeActiveTab = this.changeActiveTab.bind(this);
     }
-
+    // меняем активный таб
     changeActiveTab(event) {
 
         let activeTab;
@@ -48,7 +48,5 @@ class Tabs extends Component {
 function mapStateToProps({ task, workTask, madeTask, considerTask, rejectTask, draftTask }) {
     return { task, workTask, madeTask, considerTask, rejectTask, draftTask };
 }
-
-
 
 export default connect(mapStateToProps)(Tabs);

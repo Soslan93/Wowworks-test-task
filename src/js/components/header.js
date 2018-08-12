@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import Nav from '../containers/header/nav';
-import Info from '../containers/header/info';
+import Nav from './header/nav';
+import { Info } from './header/info';
 
 export default class Header extends Component {
     constructor(props) {

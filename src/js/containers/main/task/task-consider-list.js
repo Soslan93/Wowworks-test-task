@@ -5,6 +5,10 @@ import { TableRow } from "./task-table/table-row";
 
 class TaskConsiderList extends Component {
 
+    /**
+     * Render a list of task
+     * @param {Array} task - The list of the task.
+     */
     renderTask(task) {
         return (
             <TableRow task={task} />
@@ -16,6 +20,7 @@ class TaskConsiderList extends Component {
             <table className="table table-hover">
                 <TableHead />
                 <tbody>
+                    {/*отобразим наш массив объектов в таблице*/}
                     {this.props.considerTask.map(this.renderTask)}
                 </tbody>
             </table>
@@ -23,10 +28,12 @@ class TaskConsiderList extends Component {
     }
 }
 
+// осуществляем чтение состояния, все что возвратится будет доступно внутри компоненты (props), 
+// а также осуществляем фильтрацию данных
 function mapStateToProps({ considerTask, filterTask, filterByType }) {
     return {
         considerTask: considerTask.filter(considerTask => considerTask.description.toLowerCase().includes(filterTask) && considerTask.type.includes(filterByType))
     };
 }
-
+// Связываем компоненту TaskConsiderList с Redux store
 export default connect(mapStateToProps)(TaskConsiderList);
