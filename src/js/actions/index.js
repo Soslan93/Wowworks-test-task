@@ -1,5 +1,9 @@
+import task from '../../task';
+import { workTask, considerTask, madeTask, rejectTask, draftsTask } from '../../otherTask';
+
 export const FILTER_LIST = 'FILTER_LIST';
 export const FILTER_BY_TYPE = 'FILTER_BY_TYPE';
+
 
 export function filterList(term) {
 
@@ -33,7 +37,7 @@ export function filterByType(e) {
             type: FILTER_BY_TYPE,
             payload: ''
         };
-    } 
+    }
 
 }
 

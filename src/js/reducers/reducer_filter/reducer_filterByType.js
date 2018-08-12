@@ -1,4 +1,4 @@
-import { FILTER_BY_TYPE } from '../actions/index';
+import { FILTER_BY_TYPE } from '../../actions/index';
 const initialState = '';
 
 export default function (state = initialState, action) {
