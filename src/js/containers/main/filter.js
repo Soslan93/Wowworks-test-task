@@ -16,7 +16,7 @@ class Filter extends Component {
         this.onInputChange = this.onInputChange.bind(this);
         this.onClickCheckbox = this.onClickCheckbox.bind(this);
     }
-
+    /** Filter a list of task by input */
     onInputChange(event) {
         this.setState({
             term: event.target.value
@@ -25,8 +25,16 @@ class Filter extends Component {
         this.props.filterList(event.target.value);
     }
 
+    /** Filter a list of task by input */
     onClickCheckbox(event) {
-
+        let check;
+        check = document.querySelectorAll(".custom-control-input");
+        check.forEach(check => {
+            if (event.target.className !== check.className) {
+                check.checked = false;
+                console.log(check.className);
+            }
+        });
         this.props.filterByType(event.target);
 
     }
