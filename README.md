@@ -27,3 +27,14 @@ npm install
 npm start
 ```
 ```
+
+## Built With
+
+* [Webpack](https://webpack.js.org/)
+* [Bootstrap](https://getbootstrap.com/)
+* [SCSS](https://sass-lang.com/)
+* [JavaScript](https://www.javascript.com/)
+* [Babel](https://babeljs.io/)
+## Authors
+
+* **Soslan Kulumbekov** - *Initial work*
