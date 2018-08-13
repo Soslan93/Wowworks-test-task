@@ -38,6 +38,8 @@ http://localhost:8080/
 ## Built With
 
 * [Webpack](https://webpack.js.org/)
+* [React](https://reactjs.org/)
+* [Redux](https://redux.js.org/)
 * [Bootstrap](https://getbootstrap.com/)
 * [SCSS](https://sass-lang.com/)
 * [JavaScript](https://www.javascript.com/)
