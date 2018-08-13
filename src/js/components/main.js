@@ -40,11 +40,11 @@ class Main extends Component {
                             <div className="task-list">
                                 <div className="task-task">
                                     <Route exact path="/" component={TaskList} />
-                                    <Route exact path="/b" component={TaskWorkList} />
-                                    <Route exact path="/c" component={TaskConsiderList} />
-                                    <Route exact path="/d" component={TaskMadeList} />
-                                    <Route exact path="/e" component={TaskRejectList} />
-                                    <Route exact path="/f" component={TaskDraftList} />
+                                    <Route exact path="/work" component={TaskWorkList} />
+                                    <Route exact path="/consider" component={TaskConsiderList} />
+                                    <Route exact path="/made" component={TaskMadeList} />
+                                    <Route exact path="/reject" component={TaskRejectList} />
+                                    <Route exact path="/draft" component={TaskDraftList} />
                                 </div>
                             </div>
                         </div>

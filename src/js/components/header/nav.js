@@ -1,21 +1,15 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 export default class Nav extends Component {
-
     constructor(props) {
         super(props);
 
-        this.changeActivenav = this.changeActivenav.bind(this);
+        this.isActivePage = this.isActivePage.bind(this);
     }
-    // меняем активный nav
-    changeActivenav(event) {
 
-        let active;
-        active = document.querySelector(".nav-linkheader-active").classList;
-        active.remove("nav-linkheader-active");
-       
-        event.target.classList.add("nav-linkheader-active");
+    isActivePage(path) {
+        return window.location.pathname === path
     }
 
     render() {
@@ -23,17 +17,17 @@ export default class Nav extends Component {
             <div className="col-12 col-sm-5 col-lg-5 somenav d-flex justify-content-md-center">
                 <nav className="navbar navbar-expand-sm navbar-dark">
                     <ul className="navbar-nav">
-                        <li className="nav-item" onClick={this.changeActivenav} >
-                            <Link className="nav-link nav-linkheader nav-linkheader-active" to="/" >Задания</Link>
+                        <li className="nav-item">
+                            <NavLink className="nav-link nav-linkheader" activeClassName="nav-linkheader-active" isActive={() => this.isActivePage('/')} to="/" >Задания</NavLink>
                         </li>
-                        <li className="nav-item" onClick={this.changeActivenav} >
-                            <Link className="nav-link nav-linkheader" to="/finance" >Финансы</Link>
+                        <li className="nav-item">
+                            <NavLink activeClassName="nav-linkheader-active" className="nav-link nav-linkheader" isActive={() => this.isActivePage('/finance')} to="/finance" >Финансы</NavLink>
                         </li>
-                        <li className="nav-item"  onClick={this.changeActivenav}>
-                            <Link className="nav-link nav-linkheader" to="/company" >Компания</Link>
+                        <li className="nav-item">
+                            <NavLink activeClassName="nav-linkheader-active" className="nav-link nav-linkheader" isActive={() => this.isActivePage('/company')} to="/company" >Компания</NavLink>
                         </li>
-                        <li className="nav-item" onClick={this.changeActivenav}>
-                            <Link className="nav-link nav-linkheader" to="/statistic">Статистика</Link>
+                        <li className="nav-item">
+                            <NavLink activeClassName="nav-linkheader-active" className="nav-link nav-linkheader" isActive={() => this.isActivePage('/statistic')} to="/statistic">Статистика</NavLink>
                         </li>
                     </ul>
                 </nav>

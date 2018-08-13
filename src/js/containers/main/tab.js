@@ -1,44 +1,37 @@
 import React, { Component } from 'react';
 import { connect } from "react-redux";
-import { Link } from 'react-router-dom';
+import { NavLink  } from 'react-router-dom';
 
 class Tabs extends Component {
-
     constructor(props) {
         super(props);
 
-        this.changeActiveTab = this.changeActiveTab.bind(this);
-    }
-    // меняем активный таб
-    changeActiveTab(event) {
-
-        let activeTab;
-        activeTab = document.querySelector(".nav-link-active").classList;
-        activeTab.remove("nav-link-active");
-
-        event.target.classList.add("nav-link-active");
+        this.isActivePage = this.isActivePage.bind(this);
     }
 
+    isActivePage(path) {
+        return window.location.pathname === path
+    }
     render() {
         return (
             <ul className="tabs">
-                <li className="nav-item nav-item-main" onClick={this.changeActiveTab}>
-                    <Link className="nav-link nav-link-active new-task" to="/" >Новые <span class="badge badge-pill badge-light">{this.props.task.length}</span></Link>
+                <li className="nav-item nav-item-main">
+                    <NavLink className="nav-link"  activeClassName="nav-link-active" to="/" isActive={() => this.isActivePage('/')} >Новые <span class="badge badge-pill badge-light">{this.props.task.length}</span></NavLink >
                 </li>
-                <li className="nav-item nav-item-main" onClick={this.changeActiveTab}>
-                    <Link className="nav-link task-inthework" to="/b" >В работе <span class="badge badge-pill badge-active">{this.props.workTask.length}</span></Link>
+                <li className="nav-item nav-item-main">
+                    <NavLink className="nav-link" activeClassName="nav-link-active" to="/work" isActive={() => this.isActivePage('/work')} >В работе <span class="badge badge-pill badge-active">{this.props.workTask.length}</span></NavLink >
                 </li>
-                <li className="nav-item nav-item-main" onClick={this.changeActiveTab}>
-                    <Link className="nav-link task-consideration" to="/c" >На рассмотрении <span class="badge badge-pill badge-light">{this.props.madeTask.length}</span></Link>
+                <li className="nav-item nav-item-main">
+                    <NavLink className="nav-link" activeClassName="nav-link-active" to="/consider" isActive={() => this.isActivePage('/consider')} >На рассмотрении <span class="badge badge-pill badge-light">{this.props.madeTask.length}</span></NavLink >
                 </li>
-                <li className="nav-item nav-item-main" onClick={this.changeActiveTab}>
-                    <Link className="nav-link task-made" to="/d" >Выполнены <span class="badge badge-pill badge-light">{this.props.considerTask.length}</span></Link>
+                <li className="nav-item nav-item-main">
+                    <NavLink className="nav-link" activeClassName="nav-link-active" to="/made" isActive={() => this.isActivePage('/made')} >Выполнены <span class="badge badge-pill badge-light">{this.props.considerTask.length}</span></NavLink >
                 </li>
-                <li className="nav-item nav-item-main" onClick={this.changeActiveTab}>
-                    <Link className="nav-link task-rejected" to="/e" >Отменены <span class="badge badge-pill badge-light">{this.props.rejectTask.length}</span></Link>
+                <li className="nav-item nav-item-main">
+                    <NavLink className="nav-link" activeClassName="nav-link-active" to="/reject" isActive={() => this.isActivePage('/reject')} >Отменены <span class="badge badge-pill badge-light">{this.props.rejectTask.length}</span></NavLink >
                 </li>
-                <li className="nav-item nav-item-main" onClick={this.changeActiveTab}>
-                    <Link className="nav-link task-drafts" to="/f" >Черновики <span class="badge badge-pill badge-light">{this.props.draftTask.length}</span></Link>
+                <li className="nav-item nav-item-main">
+                    <NavLink className="nav-link" activeClassName="nav-link-active" to="/draft" isActive={() => this.isActivePage('/draft')} >Черновики <span class="badge badge-pill badge-light">{this.props.draftTask.length}</span></NavLink >
                 </li>
             </ul>
         );
@@ -49,4 +42,4 @@ function mapStateToProps({ task, workTask, madeTask, considerTask, rejectTask, d
     return { task, workTask, madeTask, considerTask, rejectTask, draftTask };
 }
 
-export default connect(mapStateToProps)(Tabs);
+export default connect(mapStateToProps, null, null, { pure: false })(Tabs);

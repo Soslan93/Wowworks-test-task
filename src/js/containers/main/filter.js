@@ -32,7 +32,6 @@ class Filter extends Component {
         check.forEach(check => {
             if (event.target.className !== check.className) {
                 check.checked = false;
-                console.log(check.className);
             }
         });
         this.props.filterByType(event.target);
