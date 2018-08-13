@@ -4,7 +4,7 @@
   "description": "wowworks-test-task",
   "main": "index.js",
   "scripts": {
-    "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js",
+    "start": "webpack-dev-server --mode production",
     "build:prod": "webpack --env production",
     "watch:dev": "webpack --watch --env development",
     "build:dev": "webpack --env development"

@@ -32,7 +32,7 @@ const clientConfig = (function webpackConfig() {
                     {
                         loader: 'css-loader', // translates CSS into CommonJS modules
                         options: {
-                            minimize: PROD ? true: false,
+                            minimize: PROD ? true : false,
                             url: false,
                             sourceMap: false
                         }
@@ -75,7 +75,12 @@ const clientConfig = (function webpackConfig() {
             }
         })
     )
-        
+    config.devServer = {
+        historyApiFallback: true,
+        contentBase: './'
+    }
+    config.performance = { hints: false }
+    
     return config;
 });
 
