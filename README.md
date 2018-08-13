@@ -27,6 +27,13 @@ npm install
 npm start
 ```
 ```
+Открыть браузер по адресу
+```
+npm start
+```
+```
+http://localhost:8080/
+```
 
 ## Built With
 
