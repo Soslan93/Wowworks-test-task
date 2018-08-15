@@ -1,31 +1,34 @@
-import React from 'react';
+import React, { Component } from 'react';
+import { connect } from "react-redux";
+import { fetchOtherData } from "../../actions/index";
+import { bindActionCreators } from "redux";
 
-export const Finance = () => {
-    return (
-        <div className="main">
-            <div className="container container-main">
-                <h2>105 325 ₽</h2>
+class OtherMain extends Component {
+
+    componentWillMount() {
+        this.props.fetchOtherData();
+    }
+
+    render() {
+        return (
+            <div className="main">
+                <div className="container container-main">
+                    <h2>{this.props.otherMain}</h2>
+                </div>
             </div>
-        </div>
-    );
+        );
+    }
 }
 
-export const Company = () => {
-    return (
-        <div className="main">
-            <div className="container container-main">
-                <h2>Wowworks</h2>
-            </div>
-        </div>
-    );
+function mapStateToProps({ otherMain }, ownProps) {
+    let id = ownProps.match.params.id;
+    return {
+        otherMain: otherMain[`${id}`]
+    };
 }
 
-export const Statistic = () => {
-    return (
-        <div className="main">
-            <div className="container container-main">
-                <h2>20 выполненных работ</h2>
-            </div>
-        </div>
-    );
+function mapDispatchToProps(dispatch) {
+    return bindActionCreators({ fetchOtherData }, dispatch);
 }
+
+export default connect(mapStateToProps, mapDispatchToProps)(OtherMain);

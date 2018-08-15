@@ -1,29 +1,28 @@
 import React, { Component } from 'react';
-import TaskList from '../containers/main/task/task-list';
-import TaskWorkList from '../containers/main/task/task-work-list';
-import TaskMadeList from '../containers/main/task/task-made-list';
-import TaskConsiderList from '../containers/main/task/task-consider-list';
-import TaskRejectList from '../containers/main/task/task-list-rejected';
-import TaskDraftList from '../containers/main/task/task-drafts-list';
-import Tabs from '../containers/main/tab';
-import Filter from '../containers/main/filter';
+import TaskList from './task/task-list';
+import Tabs from './Tab';
+import Filter from './Filter';
+import { bindActionCreators } from "redux";
+import { connect } from "react-redux";
+import { fetchTaskData } from "../../actions/index";
 import { BrowserRouter, Route } from 'react-router-dom';
 import createBrowserHistory from "history/createBrowserHistory";
-import { connect } from "react-redux";
-
-const history = createBrowserHistory();
+import history from '../../history';
 
 const user = "Никита Ласточкин";
 
-const NewTask = () => (
-    <div>
-        <h2>Привет мир!</h2>
-    </div>
-);
-
 class Main extends Component {
 
+    componentWillMount() {
+        this.props.fetchTaskData();
+    }
+
     render() {
+        if (!this.props.task) {
+            return (
+                <div>Loading...</div>
+            );
+        }
         return (
             <BrowserRouter history={history}>
                 <div className="main">
@@ -40,11 +39,7 @@ class Main extends Component {
                             <div className="task-list">
                                 <div className="task-task">
                                     <Route exact path="/" component={TaskList} />
-                                    <Route exact path="/work" component={TaskWorkList} />
-                                    <Route exact path="/consider" component={TaskConsiderList} />
-                                    <Route exact path="/made" component={TaskMadeList} />
-                                    <Route exact path="/reject" component={TaskRejectList} />
-                                    <Route exact path="/draft" component={TaskDraftList} />
+                                    <Route path="/:id" component={TaskList} />
                                 </div>
                             </div>
                         </div>
@@ -56,7 +51,14 @@ class Main extends Component {
 }
 
 function mapStateToProps({ task }) {
-    return { task };
+
+    return {
+        task
+    };
 }
 
-export default connect(mapStateToProps)(Main);
+function mapDispatchToProps(dispatch) {
+    return bindActionCreators({ fetchTaskData }, dispatch);
+}
+
+export default connect(mapStateToProps, mapDispatchToProps, null, { pure: false })(Main);

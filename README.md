@@ -14,8 +14,6 @@ node.js
 Clone Repository
 
 ```
-https://github.com/Soslan93/some-project.git
-```
 Go to project folder
 ```
 Install dependencies

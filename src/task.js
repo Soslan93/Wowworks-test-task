@@ -5,7 +5,9 @@ export default [
         "description": "Подключение провода от клеммной коробки пожарной сигнализации к расцепителю",
         "deadline": "05.06.2019",
         "sum": "10500",
-        "type": "personal"
+        "personal": false,
+        "urgent": true,
+        "night": false
     },
     {
         "id": "21544",
@@ -13,7 +15,9 @@ export default [
         "description": "Установить кабельные металлические лотки",
         "deadline": "05.06.2019",
         "sum": "10500",
-        "type": "urgent"
+        "personal": true,
+        "urgent": true,
+        "night": false
     },
     {
         "id": "21545",
@@ -21,7 +25,9 @@ export default [
         "description": "Отремонтировать холодильник",
         "deadline": "05.06.2019",
         "sum": "10500",
-        "type": "personal"
+        "personal": true,
+        "urgent": true,
+        "night": false
     },
     {
         "id": "21546",
@@ -29,7 +35,9 @@ export default [
         "description": "Установить стиральную машину",
         "deadline": "05.06.2019",
         "sum": "10500",
-        "type": "night"
+        "personal": true,
+        "urgent": true,
+        "night": false
     },
     {
         "id": "21547",
@@ -37,7 +45,9 @@ export default [
         "description": "Подключить кабель питания к микроволновке",
         "deadline": "05.06.2019",
         "sum": "10500",
-        "type": "personal"
+        "personal": true,
+        "urgent": true,
+        "night": false
     },
     {
         "id": "21548",
@@ -45,7 +55,9 @@ export default [
         "description": "Отремонтировать розетку",
         "deadline": "05.06.2019",
         "sum": "10500",
-        "type": "personal"
+        "personal": true,
+        "urgent": true,
+        "night": false
     },
     {
         "id": "21549",
@@ -53,7 +65,9 @@ export default [
         "description": "Запрограммировать плк вентиляции",
         "deadline": "05.06.2019",
         "sum": "10500",
-        "type": "personal"
+        "personal": true,
+        "urgent": true,
+        "night": false
     },
     {
         "id": "21550",
@@ -61,7 +75,9 @@ export default [
         "description": "Вынести мусор",
         "deadline": "05.06.2019",
         "sum": "10500",
-        "type": "urgent"
+        "personal": true,
+        "urgent": true,
+        "night": false
     },
     {
         "id": "21551",
@@ -69,7 +85,9 @@ export default [
         "description": "Помыть посуду",
         "deadline": "05.06.2019",
         "sum": "10500",
-        "type": "personal"
+        "personal": true,
+        "urgent": true,
+        "night": false
     },
     {
         "id": "21552",
@@ -77,6 +95,8 @@ export default [
         "description": "Приготовить ужин",
         "deadline": "05.06.2019",
         "sum": "10500",
-        "type": "personal"
+        "personal": true,
+        "urgent": true,
+        "night": false
     }
 ]

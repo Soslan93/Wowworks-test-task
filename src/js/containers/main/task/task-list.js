@@ -2,12 +2,10 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { TableHead } from "./task-table/table-head";
 import { TableRow } from "./task-table/table-row";
+
 import _ from "lodash";
 class TaskList extends Component {
-    /**
-    * Render a list of task
-    * @param {Array} task - The list of the task.
-    */
+
     renderTask(task) {
         return (
             <TableRow task={task} />
@@ -26,9 +24,11 @@ class TaskList extends Component {
     }
 }
 
-function mapStateToProps({ task, filterTask, filterByType }) {
+function mapStateToProps({ task, filterTask, filterByType }, ownProps) {
+    let id = ownProps.match.params.id;
+    let list = !id ? task["new"] : task[`${id}`];
     return {
-        task: task.filter(task => task.description.toLowerCase().includes(filterTask) && task.type.includes(filterByType))
+        task: list.filter(task => task.description.toLowerCase().includes(filterTask))
     };
 }
 

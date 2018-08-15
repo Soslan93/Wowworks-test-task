@@ -2,15 +2,10 @@ import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 
 export default class Nav extends Component {
-    constructor(props) {
-        super(props);
+    
 
-        this.isActivePage = this.isActivePage.bind(this);
-    }
-
-    isActivePage(path) {
-        return window.location.pathname === path
-    }
+    isActivePage = (path) => window.location.pathname === path;
+    
 
     render() {
         return (

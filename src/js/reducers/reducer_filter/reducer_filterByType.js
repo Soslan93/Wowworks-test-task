@@ -1,9 +1,9 @@
-import { FILTER_BY_TYPE } from '../../actions/index';
-const initialState = '';
+import { PERSON_FILT } from '../../actions/index';
+const initialState = false;
 
 export default function (state = initialState, action) {
     switch (action.type) {
-        case FILTER_BY_TYPE:
+        case PERSON_FILT:
             return action.payload;
     }
     return state;

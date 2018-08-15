@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from "react-redux";
-import { filterList, filterByType } from "../../actions/index";
+import { filterList, personFilt } from "../../actions/index";
 import { bindActionCreators } from "redux";
 
 const user = "Никита Ласточкин";
@@ -13,11 +13,10 @@ class Filter extends Component {
         this.state = {
             term: ''
         };
-        this.onInputChange = this.onInputChange.bind(this);
-        this.onClickCheckbox = this.onClickCheckbox.bind(this);
+
     }
     /** Filter a list of task by input */
-    onInputChange(event) {
+    onInputChange = (event) => {
         this.setState({
             term: event.target.value
         });
@@ -25,17 +24,18 @@ class Filter extends Component {
         this.props.filterList(event.target.value);
     }
 
-    /** Filter a list of task by input */
-    onClickCheckbox(event) {
-        let check;
-        check = document.querySelectorAll(".custom-control-input");
-        check.forEach(check => {
-            if (event.target.className !== check.className) {
-                check.checked = false;
-            }
-        });
-        this.props.filterByType(event.target);
 
+    /** Filter a list of task by input */
+    personFilter = (event) => {
+        this.props.personFilt(event.target);
+    }
+
+    nightFilter = (event) => {
+        this.props.personFilt(event.target);
+    }
+
+    urgentFilter = (event) => {
+        this.props.personFilt(event.target);
     }
 
     render() {
@@ -51,15 +51,15 @@ class Filter extends Component {
                 </div>
                 <div className="check">
                     <div className="custom-control custom-checkbox">
-                        <input type="checkbox" class="custom-control-input personal" id="customCheck1" onClick={this.onClickCheckbox} />
+                        <input type="checkbox" class="custom-control-input personal" id="customCheck1" onClick={this.personFilter} />
                         <label className="custom-control-label" for="customCheck1">Персональное</label>
                     </div>
                     <div className="custom-control custom-checkbox">
-                        <input type="checkbox" class="custom-control-input night" id="customCheck1" onClick={this.onClickCheckbox} />
+                        <input type="checkbox" class="custom-control-input night" id="customCheck1" onClick={this.nightFilter} />
                         <label className="custom-control-label" for="customCheck1">Ночное</label>
                     </div>
                     <div className="custom-control custom-checkbox">
-                        <input type="checkbox" class="custom-control-input urgent" id="customCheck1" onClick={this.onClickCheckbox} />
+                        <input type="checkbox" class="custom-control-input urgent" id="customCheck1" onClick={this.urgentFilter}/>
                         <label className="custom-control-label" for="customCheck1">Срочное</label>
                     </div>
                 </div>
@@ -71,7 +71,7 @@ class Filter extends Component {
 }
 
 function mapDispatchToProps(dispatch) {
-    return bindActionCreators({ filterList, filterByType }, dispatch);
+    return bindActionCreators({ filterList, personFilt }, dispatch);
 }
 // связываем actions с компонентой
 export default connect(null, mapDispatchToProps)(Filter);

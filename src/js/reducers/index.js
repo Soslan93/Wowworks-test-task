@@ -1,22 +1,17 @@
 import { combineReducers } from "redux";
-import TaskReducer from "./reducer_task/reducer_task";
+import { routerReducer } from "react-router-redux";
+import TaskReducer from "./reducer_main/reducer_task";
+import OtherMainReducer from "./reducer_main/reducer_other_main";
 import FilterReducer from "./reducer_filter/reducer_filter";
 import FilterByType from "./reducer_filter/reducer_filterByType";
-import WorkTaskReducer from "./reducer_task/reducer_work_task";
-import ConsiderTaskReducer from "./reducer_task/reducer_task_consider";
-import MadeTaskReducer from "./reducer_task/reducer_task_made";
-import RejectTaskReducer from "./reducer_task/reducer_task_rejected";
-import DraftTaskReducer from "./reducer_task/reducer_task_drafts";
+
 
 const rootReducer = combineReducers({
+  routing: routerReducer,
   task: TaskReducer,
+  otherMain: OtherMainReducer,
   filterTask: FilterReducer,
-  filterByType: FilterByType,
-  workTask: WorkTaskReducer,
-  madeTask: MadeTaskReducer,
-  considerTask: ConsiderTaskReducer,
-  rejectTask: RejectTaskReducer,
-  draftTask: DraftTaskReducer
+  filterByType: FilterByType
 });
 
 export default rootReducer;

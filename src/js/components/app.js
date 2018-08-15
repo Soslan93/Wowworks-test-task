@@ -1,11 +1,9 @@
 import React, { Component } from 'react';
-import Header from '../components/header';
-import Main from '../components/main';
+import { Header } from '../components/header';
+import Main from '../containers/main/Main';
 import { BrowserRouter, Route } from 'react-router-dom';
-import createBrowserHistory from 'history/createBrowserHistory';
-import { Finance, Company, Statistic } from '../containers/main/other-main';
-
-const history = createBrowserHistory();
+import OtherMain from '../containers/main/Other-main';
+import history from '../history';
 
 export default class App extends Component {
     render() {
@@ -14,9 +12,7 @@ export default class App extends Component {
                 <div>
                     <Header />
                     <Route exact path="/" component={Main} />
-                    <Route exact path="/finance" component={Finance} />
-                    <Route exact path="/company" component={Company} />
-                    <Route exact path="/statistic" component={Statistic} />
+                    <Route path="/:id" component={OtherMain} />
                 </div>
             </BrowserRouter>
         );
