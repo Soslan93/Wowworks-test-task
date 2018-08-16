@@ -24,11 +24,18 @@ class TaskList extends Component {
     }
 }
 
-function mapStateToProps({ task, filterTask, filterByType }, ownProps) {
+function mapStateToProps({ task, filterTask, filterPersonal, filterNight, filterUrgent }, ownProps) {
     let id = ownProps.match.params.id;
     let list = !id ? task["new"] : task[`${id}`];
     return {
-        task: list.filter(task => task.description.toLowerCase().includes(filterTask))
+        task: list
+        .filter(task => task.description.toLowerCase().includes(filterTask))
+        .filter(task => filterPersonal ? task.personal : task)
+        .filter(task => filterNight ? task.night : task)
+        .filter(task => filterUrgent ? task.urgent : task)
+        
+        
+       // task: _.filter(list, 'urgent')
     };
 }
 

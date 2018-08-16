@@ -25,6 +25,12 @@ npm install
 npm start
 ```
 ```
+```
+Запустить серер nodejs
+```
+node server.js
+```
+```
 Открыть браузер по адресу
 ```
 npm start

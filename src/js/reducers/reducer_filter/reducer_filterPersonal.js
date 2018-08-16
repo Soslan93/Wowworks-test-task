@@ -1,10 +1,9 @@
 import { PERSON_FILT } from '../../actions/index';
-const initialState = false;
 
-export default function (state = initialState, action) {
+export default function (state = false, action) {
     switch (action.type) {
         case PERSON_FILT:
-            return action.payload;
+            return action.payload.checked;
     }
     return state;
 }

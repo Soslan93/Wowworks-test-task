@@ -58,7 +58,7 @@
                 "deadline": "05.06.2019",
                 "sum": "10500",
                 "personal": true,
-                "urgent": true,
+                "urgent": false,
                 "night": false
             },
             {
@@ -78,7 +78,7 @@
                 "deadline": "05.06.2019",
                 "sum": "10500",
                 "personal": true,
-                "urgent": true,
+                "urgent": false,
                 "night": false
             },
             {

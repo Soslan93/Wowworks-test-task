@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from "react-redux";
-import { filterList, personFilt } from "../../actions/index";
+import { filterList, personFilt, nightFilt, urgentFilt } from "../../actions/index";
 import { bindActionCreators } from "redux";
 
 const user = "Никита Ласточкин";
@@ -31,11 +31,11 @@ class Filter extends Component {
     }
 
     nightFilter = (event) => {
-        this.props.personFilt(event.target);
+        this.props.nightFilt(event.target);
     }
 
     urgentFilter = (event) => {
-        this.props.personFilt(event.target);
+        this.props.urgentFilt(event.target);
     }
 
     render() {
@@ -51,15 +51,15 @@ class Filter extends Component {
                 </div>
                 <div className="check">
                     <div className="custom-control custom-checkbox">
-                        <input type="checkbox" class="custom-control-input personal" id="customCheck1" onClick={this.personFilter} />
+                        <input type="checkbox" class="personal" id="customCheck1" onClick={this.personFilter} />
                         <label className="custom-control-label" for="customCheck1">Персональное</label>
                     </div>
                     <div className="custom-control custom-checkbox">
-                        <input type="checkbox" class="custom-control-input night" id="customCheck1" onClick={this.nightFilter} />
+                        <input type="checkbox" class="night" id="customCheck1" onClick={this.nightFilter} />
                         <label className="custom-control-label" for="customCheck1">Ночное</label>
                     </div>
                     <div className="custom-control custom-checkbox">
-                        <input type="checkbox" class="custom-control-input urgent" id="customCheck1" onClick={this.urgentFilter}/>
+                        <input type="checkbox" class="urgent" id="customCheck1" onClick={this.urgentFilter}/>
                         <label className="custom-control-label" for="customCheck1">Срочное</label>
                     </div>
                 </div>
@@ -71,7 +71,7 @@ class Filter extends Component {
 }
 
 function mapDispatchToProps(dispatch) {
-    return bindActionCreators({ filterList, personFilt }, dispatch);
+    return bindActionCreators({ filterList, personFilt, nightFilt, urgentFilt }, dispatch);
 }
 // связываем actions с компонентой
 export default connect(null, mapDispatchToProps)(Filter);
