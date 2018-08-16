@@ -33,8 +33,6 @@ node server.js
 ```
 Открыть браузер по адресу
 ```
-npm start
-```
 ```
 http://localhost:8080/
 ```
