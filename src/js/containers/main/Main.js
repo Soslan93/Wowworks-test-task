@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import TaskList from './task/task-list';
+import TaskList from './task/Task-list';
 import Tabs from './Tab';
 import Filter from './Filter';
 import { bindActionCreators } from "redux";

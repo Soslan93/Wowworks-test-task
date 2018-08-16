@@ -12,7 +12,7 @@ const rootReducer = combineReducers({
   task: TaskReducer,
   otherMain: OtherMainReducer,
   filterTask: FilterReducer,
-  filterPersonal: FilterByPers,
+  filterPersonal: FilterPersonal,
   filterNight: FilterNight,
   filterUrgent: FilterUrgent
 });
