@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
-import Nav from './header/Nav';
-import { Info } from './header/Info';
+import React, { Component } from "react";
+import Nav from "./header/Nav";
+import { Info } from "./header/Info";
 
 export const Header = () => {
     return (

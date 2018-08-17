@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
 const balance = '218 982,90';
 const user = 'Никита Ласточкин';

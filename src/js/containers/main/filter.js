@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 import { connect } from "react-redux";
 import { filterList, personFilt, nightFilt, urgentFilt } from "../../actions/index";
 import { bindActionCreators } from "redux";

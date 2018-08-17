@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
-import TaskList from './task/Task-list';
-import Tabs from './Tab';
-import Filter from './Filter';
+import React, { Component } from "react";
+import TaskList from "./task/Task-list";
+import Tabs from "./Tab";
+import Filter from "./Filter";
 import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
 import { fetchTaskData } from "../../actions/index";

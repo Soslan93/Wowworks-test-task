@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
-import { Header } from '../components/Header';
-import Main from '../containers/main/Main';
-import { BrowserRouter, Route } from 'react-router-dom';
-import OtherMain from '../containers/main/Other-main';
-import history from '../history';
+import React, { Component } from "react";
+import { Header } from "../components/Header";
+import Main from "../containers/main/Main";
+import { BrowserRouter, Route } from "react-router-dom";
+import OtherMain from "../containers/main/Other-main";
+import history from "../history";
 
 export default class App extends Component {
     render() {
