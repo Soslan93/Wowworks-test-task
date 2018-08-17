@@ -2,10 +2,11 @@ import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 
 export default class Nav extends Component {
-    
+
 
     isActivePage = (path) => window.location.pathname === path;
     
+
 
     render() {
         return (
@@ -22,7 +23,7 @@ export default class Nav extends Component {
                             <NavLink activeClassName="nav-linkheader-active" className="nav-link nav-linkheader" isActive={() => this.isActivePage('/company')} to="/company" >Компания</NavLink>
                         </li>
                         <li className="nav-item">
-                            <NavLink activeClassName="nav-linkheader-active" className="nav-link nav-linkheader" isActive={() => this.isActivePage('/statistic')} to="/statistic">Статистика</NavLink>
+                            <NavLink activeClassName="nav-linkheader-active" className="nav-link nav-linkheader" isActive={() => this.isActivePage('/statistics')} to="/statistics">Статистика</NavLink>
                         </li>
                     </ul>
                 </nav>

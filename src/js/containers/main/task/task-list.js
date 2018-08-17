@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { TableHead } from "./task-table/table-head";
-import { TableRow } from "./task-table/table-row";
+import { TableHead } from "./task-table/Table-head";
+import { TableRow } from "./task-table/Table-row";
 
 import _ from "lodash";
 class TaskList extends Component {
