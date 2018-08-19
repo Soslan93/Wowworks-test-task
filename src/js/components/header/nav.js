@@ -3,6 +3,7 @@ import { NavLink } from "react-router-dom";
 import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
 import { fetchData } from "../../actions/index";
+import ItemNav from "./ItemNav";
 
 class Nav extends Component {
 
@@ -10,13 +11,9 @@ class Nav extends Component {
         this.props.fetchData();
     }
 
-    isActivePage = (path) => window.location.pathname === path;
-
     renderItem = (item) => {
         return (
-            <li className="nav-item">
-                <NavLink className="nav-link nav-linkheader" activeClassName="nav-linkheader-active" isActive={this.isActivePage.bind(this, item === "tasks" ? "/" : `/${item}`)} to={item === "tasks" ? "/" : `/${item}`} >{item}</NavLink>
-            </li>
+            <ItemNav item={item} />
         );
     }
 
