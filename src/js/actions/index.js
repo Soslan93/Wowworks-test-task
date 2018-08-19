@@ -7,6 +7,7 @@ export const NIGHT_FILT = 'NIGHT_FILT';
 export const URGENT_FILT ='URGENT_FILT';
 export const FETCH_TASK_DATA = 'FETCH_TASK_DATA';
 export const FETCH_OTHER_DATA = 'FETCH_OTHER_DATA';
+export const FETCH_DATA = 'FETCH_DATA';
 
 export function filterList(term) {
 
@@ -58,3 +59,12 @@ export function fetchOtherData() {
         payload: request
     }
 }
+
+export function fetchData() {
+    const request = axios.get(`http://localhost:3000`);
+    return {
+        type: FETCH_DATA,
+        payload: request
+    }
+}
+
