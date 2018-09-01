@@ -7,11 +7,13 @@
     "start": "webpack-dev-server --mode production",
     "build:prod": "webpack --env production",
     "watch:dev": "webpack --watch --env development",
-    "build:dev": "webpack --env development"
+    "build:dev": "webpack --env development",
+    "storybook": "start-storybook -p 9001 -c .storybook"
   },
   "author": "s.kulumbekov",
   "license": "ISC",
   "devDependencies": {
+    "@storybook/react": "^3.4.10",
     "axios": "^0.18.0",
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.5",
